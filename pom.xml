@@ -23,6 +23,12 @@
     </dependency>
   </dependencies>
 
+	<scm>
+    <connection>scm:git:git@github.com:cristianhuichaqueo@gmail.com/ad-uade/TPO_REPOSITORY.git</connection>
+    <url>scm:git:git@github.com:cristianhuichaqueo@gmail.com/ad-uade/TPO_REPOSITORY.git</url>
+    <developerConnection>scm:git:git@github.com:cristianhuichaqueo@gmail.com/ad-uade/TPO_REPOSITORY.git</developerConnection>
+  </scm>
+
 	<build>
             <plugins>
                 <plugin>
