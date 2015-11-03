@@ -6,9 +6,6 @@ import java.util.List;
 
 public class OrdenPedidoVO implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 4154907584534127480L;
 	private int nroOrdenPedido;
 	private Date fecha;

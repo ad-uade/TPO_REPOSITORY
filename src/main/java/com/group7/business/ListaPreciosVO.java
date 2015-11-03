@@ -6,9 +6,6 @@ import java.util.List;
 
 public class ListaPreciosVO implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3811119019300931872L;
 	private int nroLista;
 	private String tipo;

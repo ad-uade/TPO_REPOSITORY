@@ -1,7 +1,6 @@
 package com.group7.business;
 
 import java.io.Serializable;
-
  
 public class ClienteVO implements Serializable{
 	
