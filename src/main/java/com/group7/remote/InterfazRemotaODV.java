@@ -9,6 +9,7 @@ import com.group7.business.CondicionVentaVO;
 import com.group7.business.CotizacionVO;
 import com.group7.business.OficinaVentasVO;
 import com.group7.business.RemitoExteriorVO;
+import com.group7.business.RemitoVO;
 import com.group7.business.RodamientoVO;
 import com.group7.business.SolicitudCotizacionVO;
 
@@ -16,9 +17,9 @@ public interface InterfazRemotaODV extends Remote{
 
 	public List<CotizacionVO> dameCotizaciones()throws RemoteException;
 	
-	public RemitoExteriorVO dameRemito(int nroRemito) throws RemoteException;
+	public RemitoVO dameRemito(int nroRemito) throws RemoteException;
 	
-	public void generarFactura(RemitoExteriorVO remito) throws RemoteException;
+	public void generarFactura(RemitoVO remito) throws RemoteException;
 	
 	public List<RemitoExteriorVO> traerRemitos() throws RemoteException;
 	

@@ -13,6 +13,9 @@ public class RemitoVO implements Serializable{
 	private int nroRemito;
 	private Date fecha;
 	private List<ItemRemitoVO> items;
+	private ClienteVO cliente;
+	private OrdenPedidoVO ordenPedido;
+	private boolean conformeCliente;
 	
 	public RemitoVO(){
 		
@@ -40,6 +43,30 @@ public class RemitoVO implements Serializable{
 
 	public void setItems(List<ItemRemitoVO> items) {
 		this.items = items;
+	}
+
+	public ClienteVO getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(ClienteVO cliente) {
+		this.cliente = cliente;
+	}
+
+	public OrdenPedidoVO getOrdenPedido() {
+		return ordenPedido;
+	}
+
+	public void setOrdenPedido(OrdenPedidoVO ordenPedido) {
+		this.ordenPedido = ordenPedido;
+	}
+
+	public boolean isConformeCliente() {
+		return conformeCliente;
+	}
+
+	public void setConformeCliente(boolean conformeCliente) {
+		this.conformeCliente = conformeCliente;
 	}
 
 }

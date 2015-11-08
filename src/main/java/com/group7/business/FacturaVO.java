@@ -14,7 +14,7 @@ public class FacturaVO implements Serializable{
 	private Date fecha;
 	private ClienteVO cliente;
 	private float precio;
-	private RemitoExteriorVO remito;
+	private RemitoVO remito;
 	private List<ItemFacturaVO> items;
 	
 	public FacturaVO(){
@@ -53,11 +53,11 @@ public class FacturaVO implements Serializable{
 		this.precio = precio;
 	}
 
-	public RemitoExteriorVO getRemito() {
+	public RemitoVO getRemito() {
 		return remito;
 	}
 
-	public void setRemito(RemitoExteriorVO remito) {
+	public void setRemito(RemitoVO remito) {
 		this.remito = remito;
 	}
 
