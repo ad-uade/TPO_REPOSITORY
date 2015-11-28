@@ -33,15 +33,15 @@ public interface InterfazRemotaODV extends Remote{
 	
 	public CondicionVentaVO dameCondicion(int nroCondicion) throws RemoteException;
 	
-	public boolean altaCliente(String razonSocial, int CUIL, String direccion, String telefono, OficinaVentasVO of) throws RemoteException;
+	public boolean altaCliente(String razonSocial, Long CUIL, String direccion, String telefono, OficinaVentasVO of) throws RemoteException;
 	
 	public boolean modificarCliente(ClienteVO cliente) throws RemoteException;
 
-	public ClienteVO traerCliente(int CUIL) throws RemoteException; 
+	public ClienteVO traerCliente(Long CUIL) throws RemoteException; 
 	
 	public boolean generarCotizacion(SolicitudCotizacionVO SC, int diasValidez) throws RemoteException;
 	
-	public boolean bajaCliente(int CUIL) throws RemoteException;
+	public boolean bajaCliente(Long CUIL) throws RemoteException;
 	
 	public List<ClienteVO> listarClientes() throws RemoteException;
 	

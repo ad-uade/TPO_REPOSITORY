@@ -6,7 +6,7 @@ public class ClienteVO implements Serializable{
 	
 	private static final long serialVersionUID = -2857643638341621653L;
 	
-	private Integer CUILCliente;
+	private Long CUILCliente;
 	private String razonSocial;
 	private String direccion;
 	private String telefono;
@@ -25,11 +25,11 @@ public class ClienteVO implements Serializable{
 		this.razonSocial = razonSocial;
 	}
 
-	public int getCUILCliente() {
+	public Long getCuilCliente() {
 		return CUILCliente;
 	}
 
-	public void setCUILCliente(int cUILCliente) {
+	public void setCuilCliente(Long cUILCliente) {
 		CUILCliente = cUILCliente;
 	}
 
