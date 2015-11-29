@@ -10,7 +10,7 @@ public class ListaPreciosVO implements Serializable{
 	private int nroLista;
 	private String tipo;
 	private Date fechaPublicacion;
-	private String vigencia;
+	private Integer vigencia;
 	private boolean estado;
 	private ProveedorVO proveedor;
 	private List<ItemsListaPreciosVO> items;
@@ -43,11 +43,11 @@ public class ListaPreciosVO implements Serializable{
 		this.fechaPublicacion = fechaPublicacion;
 	}
 
-	public String getVigencia() {
+	public Integer getVigencia() {
 		return vigencia;
 	}
 
-	public void setVigencia(String vigencia) {
+	public void setVigencia(Integer vigencia) {
 		this.vigencia = vigencia;
 	}
 

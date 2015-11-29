@@ -22,7 +22,7 @@ public interface InterfazRemotaCPR extends Remote{
 	
 	public boolean altaProveedor(String razonSocial, Long CUIL, String direccion, String telefono) throws RemoteException;
 	
-	public ListaPreciosVO armarListaDePrecios(ProveedorVO proveedor, List<RodamientoVO> rodamientos, List<Float> precios, String tipo, String vigencia, float descuento) throws RemoteException;
+	public ListaPreciosVO armarListaDePrecios(ProveedorVO proveedor, List<RodamientoVO> rodamientos, List<Float> precios, String tipo, Integer vigencia, float descuento) throws RemoteException;
 	
 	public void actualizarComparativaPrecios(ListaPreciosVO listaVO) throws RemoteException;
 	
