@@ -12,15 +12,15 @@ import com.group7.business.RodamientoVO;
 
 public interface InterfazRemotaCPR extends Remote{
 
-	public boolean bajaProveedor(int CUIL) throws RemoteException;
+	public boolean bajaProveedor(Long CUIL) throws RemoteException;
 	
 	public List<ProveedorVO> listarProveedores()throws RemoteException;
 	
-	public ProveedorVO traerProveedor(Integer cuil)throws RemoteException;
+	public ProveedorVO traerProveedor(Long cuil)throws RemoteException;
 	
 	public boolean  modificarProveedor(ProveedorVO p)throws RemoteException;
 	
-	public boolean altaProveedor(String razonSocial, int CUIL, String direccion, String telefono) throws RemoteException;
+	public boolean altaProveedor(String razonSocial, Long CUIL, String direccion, String telefono) throws RemoteException;
 	
 	public ListaPreciosVO armarListaDePrecios(ProveedorVO proveedor, List<RodamientoVO> rodamientos, List<Float> precios, String tipo, String vigencia, float descuento) throws RemoteException;
 	

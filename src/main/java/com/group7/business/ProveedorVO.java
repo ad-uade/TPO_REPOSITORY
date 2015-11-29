@@ -8,7 +8,7 @@ public class ProveedorVO implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 9111991128782143313L;
-	private int CUILProveedor;
+	private Long cuilProveedor;
 	private String razonSocial;
 	private String direccion;
 	private String telefono;
@@ -16,14 +16,6 @@ public class ProveedorVO implements Serializable{
 	
 	public ProveedorVO(){
 		
-	}
-
-	public int getCUILProveedor() {
-		return CUILProveedor;
-	}
-
-	public void setCUILProveedor(int cUILProveedor) {
-		CUILProveedor = cUILProveedor;
 	}
 
 	public String getRazonSocial() {
@@ -56,6 +48,20 @@ public class ProveedorVO implements Serializable{
 
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+
+	/**
+	 * @return the cuilProveedor
+	 */
+	public Long getCuilProveedor() {
+		return cuilProveedor;
+	}
+
+	/**
+	 * @param cuilProveedor the cuilProveedor to set
+	 */
+	public void setCuilProveedor(Long cuilProveedor) {
+		this.cuilProveedor = cuilProveedor;
 	}
 	
 }
