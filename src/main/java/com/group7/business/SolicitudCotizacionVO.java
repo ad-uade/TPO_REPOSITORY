@@ -13,7 +13,8 @@ public class SolicitudCotizacionVO implements Serializable{
 	private int nroSolicitudCotizacion;
 	private Date fecha;
 	private ClienteVO cliente;
-	private List<ItemSolicitudCotizacionVO>items;
+	private List<ItemSolicitudCotizacionVO> items;
+	private OficinaVentasVO oficinaVentasVO;
 	
 	public SolicitudCotizacionVO(){
 		
@@ -49,6 +50,20 @@ public class SolicitudCotizacionVO implements Serializable{
 
 	public void setItems(List<ItemSolicitudCotizacionVO> items) {
 		this.items = items;
+	}
+
+	/**
+	 * @return the oficinaVentasVO
+	 */
+	public OficinaVentasVO getOficinaVentasVO() {
+		return oficinaVentasVO;
+	}
+
+	/**
+	 * @param oficinaVentasVO the oficinaVentasVO to set
+	 */
+	public void setOficinaVentasVO(OficinaVentasVO oficinaVentasVO) {
+		this.oficinaVentasVO = oficinaVentasVO;
 	}
 	
 }

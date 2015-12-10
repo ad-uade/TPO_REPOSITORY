@@ -5,9 +5,6 @@ import java.util.Date;
 
 public class CondicionVentaVO implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -2130328448117916481L;
 	private int nroCondicion;
 	private Date fechaDesde;

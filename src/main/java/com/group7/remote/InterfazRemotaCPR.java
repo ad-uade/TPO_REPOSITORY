@@ -12,15 +12,15 @@ import com.group7.business.RodamientoVO;
 
 public interface InterfazRemotaCPR extends Remote{
 
-	public boolean bajaProveedor(Long CUIL) throws RemoteException;
+	public void bajaProveedor(Long CUIL) throws RemoteException;
 	
 	public List<ProveedorVO> listarProveedores()throws RemoteException;
 	
 	public ProveedorVO traerProveedor(Long cuil)throws RemoteException;
 	
-	public boolean  modificarProveedor(ProveedorVO p)throws RemoteException;
+	public void  modificarProveedor(ProveedorVO p)throws RemoteException;
 	
-	public boolean altaProveedor(String razonSocial, Long CUIL, String direccion, String telefono) throws RemoteException;
+	public void altaProveedor(String razonSocial, Long CUIL, String direccion, String telefono) throws RemoteException;
 	
 	public ListaPreciosVO armarListaDePrecios(ProveedorVO proveedor, List<RodamientoVO> rodamientos, List<Float> precios, String tipo, Integer vigencia, float descuento) throws RemoteException;
 	
@@ -30,7 +30,7 @@ public interface InterfazRemotaCPR extends Remote{
 	
 	public List<ListaPreciosVO> traerListas () throws RemoteException;
 	
-	public boolean generarOrdenDeCompra(OrdenPedidoVO ordenDePedido) throws RemoteException;
+	public void generarOrdenDeCompra(OrdenPedidoVO ordenDePedido) throws RemoteException;
 	
 	public void generarOrdenDeCompraManual(List<RodamientoVO> rodamientos, List<Integer> cantidades) throws RemoteException;
 	
@@ -40,7 +40,7 @@ public interface InterfazRemotaCPR extends Remote{
 	
 	public OrdenCompraVO dameOrdenCompraVO(int nroOrdenCompra) throws RemoteException;
 	
-	public boolean revisarOrdenDePedido(OrdenPedidoVO ordenPedido) throws RemoteException;
+	public void revisarOrdenDePedido(OrdenPedidoVO ordenPedido) throws RemoteException;
 	
 	public void recepcionDeMercaderia(OrdenCompraVO ordenVO) throws RemoteException;
 	

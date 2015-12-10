@@ -29,21 +29,25 @@ public interface InterfazRemotaODV extends Remote{
 	
 	public List<RemitoExteriorVO> traerRemitosNoConformados() throws RemoteException;
 	
-	public List<CondicionVentaVO> condiciones() throws RemoteException;
+	public List<CondicionVentaVO> buscarCondiciones() throws RemoteException;
 	
 	public CondicionVentaVO dameCondicion(int nroCondicion) throws RemoteException;
 	
-	public boolean altaCliente(String razonSocial, Long CUIL, String direccion, String telefono, OficinaVentasVO of) throws RemoteException;
+	// Cliente
 	
-	public boolean modificarCliente(ClienteVO cliente) throws RemoteException;
+	public void altaCliente(ClienteVO clientevo) throws RemoteException;
+	
+	public void modificarCliente(ClienteVO cliente) throws RemoteException;
 
-	public ClienteVO traerCliente(Long CUIL) throws RemoteException; 
+	public ClienteVO buscarCliente(Long CUIL) throws RemoteException; 
 	
-	public boolean generarCotizacion(SolicitudCotizacionVO SC, int diasValidez) throws RemoteException;
-	
-	public boolean bajaCliente(Long CUIL) throws RemoteException;
+	public void bajaCliente(Long CUIL) throws RemoteException;
 	
 	public List<ClienteVO> listarClientes() throws RemoteException;
+	
+	// -----
+	
+	public void generarCotizacion(SolicitudCotizacionVO SC, int diasValidez) throws RemoteException;
 	
 	public SolicitudCotizacionVO dameSolicitud (int nroSolicitud) throws RemoteException;
 	
@@ -55,7 +59,7 @@ public interface InterfazRemotaODV extends Remote{
 	
 	public List<SolicitudCotizacionVO> listarSolicitudesCotizacion() throws RemoteException;
 	
-	public void guardarSolicitudCotizacion(ClienteVO cliente, List<RodamientoVO> rodamientos, List<Integer> cantidades, List<CondicionVentaVO> condiciones) throws RemoteException;
+	public void guardarSolicitudCotizacion(SolicitudCotizacionVO solicitudCotizacionVO) throws RemoteException;
 	
 	public void aprobarCotizacion(CotizacionVO cotizacion) throws RemoteException;
 	
@@ -64,4 +68,3 @@ public interface InterfazRemotaODV extends Remote{
 	public void registrarConformidadCliente(int nroRemito) throws RemoteException;
 	
 }
-
