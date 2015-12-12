@@ -8,10 +8,9 @@ public class ItemSolicitudCotizacionVO implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -5277380593552858951L;
-	private int nroSolicitudCotizacion;
+	private SolicitudCotizacionVO nroSolicitudCotizacion;
 	private RodamientoVO rodamiento;
 	private int cantidad;
-	private CondicionVentaVO condicion;
 	
 	public ItemSolicitudCotizacionVO(){
 		
@@ -33,20 +32,12 @@ public class ItemSolicitudCotizacionVO implements Serializable{
 		this.cantidad = cantidad;
 	}
 
-	public int getNroSolicitudCotizacion() {
+	public SolicitudCotizacionVO getSolicitudCotizacion() {
 		return nroSolicitudCotizacion;
 	}
 
-	public void setNroSolicitudCotizacion(int nroSolicitudCotizacion) {
+	public void setSolicitudCotizacion(SolicitudCotizacionVO nroSolicitudCotizacion) {
 		this.nroSolicitudCotizacion = nroSolicitudCotizacion;
 	}
 
-	public void setCondicion(CondicionVentaVO condicion) {
-		this.condicion = condicion;
-	}
-
-	public CondicionVentaVO getCondicion() {
-		return condicion;
-	}
-	
 }

@@ -56,5 +56,4 @@ public class CondicionVentaVO implements Serializable{
 		this.formaPago = formaPago;
 	}
 	
-	
 }

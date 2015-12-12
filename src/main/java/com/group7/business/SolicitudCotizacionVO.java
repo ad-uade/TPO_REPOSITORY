@@ -1,6 +1,7 @@
 package com.group7.business;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class SolicitudCotizacionVO implements Serializable{
 	private OficinaVentasVO oficinaVentasVO;
 	
 	public SolicitudCotizacionVO(){
-		
+		items = new ArrayList<ItemSolicitudCotizacionVO>();
 	}
 
 	public int getNroSolicitudCotizacion() {
@@ -64,6 +65,14 @@ public class SolicitudCotizacionVO implements Serializable{
 	 */
 	public void setOficinaVentasVO(OficinaVentasVO oficinaVentasVO) {
 		this.oficinaVentasVO = oficinaVentasVO;
+	}
+	
+	public void add(RodamientoVO rodamiento, Integer cantidad){
+		ItemSolicitudCotizacionVO item = new ItemSolicitudCotizacionVO();
+		item.setCantidad(cantidad);
+		item.setRodamiento(rodamiento);
+		item.setSolicitudCotizacion(this);
+		items.add(item);
 	}
 	
 }
