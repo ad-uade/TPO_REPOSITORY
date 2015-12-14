@@ -5,11 +5,8 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 import com.group7.business.ClienteVO;
-import com.group7.business.CondicionVentaVO;
 import com.group7.business.CotizacionVO;
 import com.group7.business.OficinaVentasVO;
-import com.group7.business.RemitoExteriorVO;
-import com.group7.business.RemitoVO;
 import com.group7.business.RodamientoVO;
 import com.group7.business.SolicitudCotizacionVO;
 
@@ -17,21 +14,11 @@ public interface InterfazRemotaODV extends Remote{
 
 	public List<CotizacionVO> dameCotizaciones()throws RemoteException;
 	
-	public RemitoVO dameRemito(int nroRemito) throws RemoteException;
-	
-	public void generarFactura(RemitoVO remito) throws RemoteException;
-	
-	public List<RemitoExteriorVO> traerRemitos() throws RemoteException;
+	public void generarFactura(CotizacionVO cotizacionVO) throws RemoteException;
 	
 	public List<OficinaVentasVO> obtenerOficinas() throws RemoteException;
 	
 	public OficinaVentasVO dameOficina(int idOficina) throws RemoteException;
-	
-	public List<RemitoExteriorVO> traerRemitosNoConformados() throws RemoteException;
-	
-	public List<CondicionVentaVO> buscarCondiciones() throws RemoteException;
-	
-	public CondicionVentaVO dameCondicion(int nroCondicion) throws RemoteException;
 	
 	// Cliente
 	
@@ -46,12 +33,8 @@ public interface InterfazRemotaODV extends Remote{
 	public List<ClienteVO> listarClientes() throws RemoteException;
 	
 	// -----
-	
-	public void generarCotizacion(SolicitudCotizacionVO SC, int diasValidez) throws RemoteException;
-	
+
 	public SolicitudCotizacionVO dameSolicitud (int nroSolicitud) throws RemoteException;
-	
-	public RodamientoVO obtenerRodamiento (String SFK, String codigo) throws RemoteException;
 	
 	public List<RodamientoVO> traerRodamientos () throws RemoteException;
 	
@@ -62,9 +45,7 @@ public interface InterfazRemotaODV extends Remote{
 	public void guardarSolicitudCotizacion(SolicitudCotizacionVO solicitudCotizacionVO) throws RemoteException;
 	
 	public void aprobarCotizacion(CotizacionVO cotizacion) throws RemoteException;
-	
-	public void generarOrdenPedido(CotizacionVO cotizacion) throws RemoteException;
-	
-	public void registrarConformidadCliente(int nroRemito) throws RemoteException;
+
+	RodamientoVO obtenerRodamiento(String SFK, String codigo) throws RemoteException;
 	
 }

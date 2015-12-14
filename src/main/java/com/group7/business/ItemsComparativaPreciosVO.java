@@ -8,7 +8,7 @@ public class ItemsComparativaPreciosVO implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -7058061819384273303L;
-	private int idComparativa;
+	private ComparativaPreciosVO idComparativa;
 	private RodamientoVO rodamiento;
 	private float mejorPrecio;
 	private int numListaPrecios; 
@@ -18,11 +18,11 @@ public class ItemsComparativaPreciosVO implements Serializable{
 		
 	}
 
-	public int getIdComparativa() {
+	public ComparativaPreciosVO getIdComparativa() {
 		return idComparativa;
 	}
 
-	public void setIdComparativa(int idComparativa) {
+	public void setComparativa(ComparativaPreciosVO idComparativa) {
 		this.idComparativa = idComparativa;
 	}
 

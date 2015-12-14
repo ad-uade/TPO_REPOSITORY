@@ -68,11 +68,20 @@ public class SolicitudCotizacionVO implements Serializable{
 	}
 	
 	public void add(RodamientoVO rodamiento, Integer cantidad){
-		ItemSolicitudCotizacionVO item = new ItemSolicitudCotizacionVO();
-		item.setCantidad(cantidad);
-		item.setRodamiento(rodamiento);
-		item.setSolicitudCotizacion(this);
-		items.add(item);
+		boolean existe = false;
+		for (ItemSolicitudCotizacionVO item : items){
+			if (item.getRodamiento().equals(rodamiento)){
+				item.setCantidad(item.getCantidad() + cantidad);
+				existe = true;
+			}
+		}
+		if (!existe){
+			ItemSolicitudCotizacionVO item = new ItemSolicitudCotizacionVO();
+			item.setCantidad(cantidad);
+			item.setRodamiento(rodamiento);
+			item.setSolicitudCotizacion(this);
+			items.add(item);
+		}
 	}
 	
 }

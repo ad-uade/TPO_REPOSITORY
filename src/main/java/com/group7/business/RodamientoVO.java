@@ -65,4 +65,8 @@ public class RodamientoVO implements Serializable{
 		this.estado = estado;
 	}
 	
+	public boolean equals(RodamientoVO obj) {
+		return this.getCodigoPieza().equals(obj.getCodigoPieza()) && this.getCodigoSFK().equals(obj.getCodigoSFK());
+	}
+	
 }
